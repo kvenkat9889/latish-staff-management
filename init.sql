@@ -1,7 +1,3 @@
--- Create the database
-CREATE DATABASE staff_management;
-
--- Create the employees table
 CREATE TABLE IF NOT EXISTS employees (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
