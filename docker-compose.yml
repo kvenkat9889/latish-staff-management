@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: staff_management
     ports:
-      - "5436:5432"
+      - "5002:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -22,7 +22,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - "3003:3003"
+      - "3002:3002"
     environment:
       DB_HOST: postgres
       DB_PORT: 5432
@@ -37,7 +37,7 @@ services:
     volumes:
       - ./HR-Staffmanagement:/usr/share/nginx/html:ro
     ports:
-      - "8113:80"
+      - "7005:80"
     depends_on:
       - backend
     restart: unless-stopped
